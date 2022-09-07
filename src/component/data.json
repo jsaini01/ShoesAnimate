@@ -1,0 +1,19 @@
+[
+  {
+    "id": 1,
+    "brand": "Nike",
+    "img": "./images/shoes1.png"
+  },
+
+  {
+    "id": 2,
+    "brand": "Nike",
+    "img": "./images/shoes2.png"
+  },
+
+  {
+    "id": 3,
+    "brand": "Nike",
+    "img": "./images/shoes3.png"
+  }
+]
