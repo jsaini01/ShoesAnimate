@@ -2,11 +2,13 @@ import { Background } from "../styles/MainPageStyle";
 
 import data from "./data.json";
 
+import { motion } from "framer-motion";
+
 const MainPage = () => {
   return (
     <Background>
-      <section>
-        <div className="container">
+      <motion.section>
+        <motion.div className="container" animate={{ scale: [1, 0.8, 1.1, 1] }}>
           {data.map((cur) => (
             <div className="card" key={cur.id}>
               <div className="imgbx">
@@ -28,12 +30,26 @@ const MainPage = () => {
                   <span></span>
                   <span></span>
                 </div>
-                <a href="https://www.nike.com/404">Buy Now</a>
+                <motion.a
+                  href="https://www.nike.com/404"
+                  whileTap={{ scale: 1.1 }}
+                  drag="x"
+                  dragConstraints={{ left: -100, right: 100 }}
+                >
+                  Buy Now
+                </motion.a>
               </div>
+              <motion.p
+                style={{ color: "white" }}
+                animate={{ scale: 2 }}
+                transition={{ repeat: Infinity, duration: 0.9 }}
+              >
+                💥Sale💥
+              </motion.p>
             </div>
           ))}
-        </div>
-      </section>
+        </motion.div>
+      </motion.section>
     </Background>
   );
 };

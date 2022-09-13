@@ -39,7 +39,7 @@ export const Background = styled.div`
     z-index: 10;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+
     align-items: center;
   }
 
